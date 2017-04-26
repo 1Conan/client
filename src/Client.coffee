@@ -5,11 +5,11 @@ Events = require('events').EventEmitter
 'Rockets' client for server-side scripts.
 ###
 module.exports = class Client extends Events
-
+  constructor: (@wsUrl) ->
   # Attempts to create a new socket connection to the command center.
   connect: () ->
     try
-      @socket = new Socket('ws://rockets.cc:3210')
+      @socket = new Socket(@wsUrl)
       @register()
     catch error
       @onerror error
