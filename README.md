@@ -2,7 +2,7 @@
 
 ---
 
-This is a client for [rockets/rockets](https://github.com/rockets/rockets).
+This is a client for [rockets/rockets](https://github.com/rockets/rockets). You need to run a local instance to use this client.
 
 ## Demo
 
@@ -19,7 +19,7 @@ npm install rockets
 ```js
 var Rockets = require('rockets');
 
-var client = new Rockets();
+var client = new Rockets('ws://localhost:3210');
 
 // Register events on the client.
 client.on('connect', function() {
